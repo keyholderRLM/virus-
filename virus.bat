@@ -109,13 +109,19 @@ echo me khili
 setlocal enabledelayedexpansion
 
 set "base=6r8$Fsj3@!9#4g1&8^aLx0pFZ73b"
+set "FOLDER=%USERPROFILE%\Desktop"
+cd /d "%FOLDER%"
 
 set count=0
+
+:: Går gjennom alle filer som heter "yay - Kopi*.txt" og gir dem unike navn
 for %%f in ("yay - Kopi*.txt") do (
     set /a count+=1
     set "newname=!base!!count!.txt"
-    ren "%%f" "!newname!"
+    echo Renaming "%%~nxf" to "!newname!"
+    ren "%%~nxf" "!newname!"
 )
+
 
 
 set DEST=%USERPROFILE%\Desktop/secret
@@ -125,7 +131,7 @@ for /l %%i in (1,1,30) do (
     echo Real important stuff %%i > "!DEST!\secret_file%%i.txt"
 )
 
-:: Simulate encryption by overwriting content
+
 for %%f in ("!DEST!\*.txt") do (
     echo oh well your files got encrypted! 6r8$Fsj3@!9#4g1&8^aLx0pFZ73b > %%f
 )
@@ -224,9 +230,9 @@ echo Sending sensitive data to remote server...
 ping localhost -n 2 >nul
 echo Data sent: 2MB of gurt data
 start new_script.bat2
-goto joemama!
+goto joemama
 
-:joemama!
+:joemama
 echo MsgBox "gurtlings spawn and start flooding popups and pop and ups" >> %temp%\popup.vbs
 
 echo @echo off > new_script3.bat
